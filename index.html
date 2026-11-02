@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grok Custom Prompts &amp; Translation Switcher — Privacy Policy</title>
+<style>
+:root{color-scheme:light dark}body{max-width:46rem;margin:0 auto;padding:2rem 1rem 4rem;font:16px/1.75 system-ui,-apple-system,"Hiragino Sans",sans-serif}h1{font-size:1.7rem;line-height:1.35}h2{font-size:1.15rem;margin-top:2rem}hr{margin:3rem 0}.muted{opacity:.7}a{overflow-wrap:anywhere}li{margin:.5rem 0}
+</style>
+</head>
+<body>
+<nav aria-label="Language"><a href="#en">English</a> · <a href="#ja">日本語</a></nav>
+<section id="en">
+<h1>Grok Custom Prompts &amp; Translation Switcher Privacy Policy</h1>
+<p class="muted">Last updated: November 2, 2026 · Developer: aocrafted</p>
+<p>This independent browser extension helps you read and ask questions about individual X posts. It adds translation controls and lets you write a question in X’s native Grok panel. It is not affiliated with or endorsed by X or xAI.</p>
+<h2>Information the extension handles</h2>
+<ul>
+<li><strong>Website content and post identifiers:</strong> The extension reads post text and relevant page structure on x.com and twitter.com to attach its controls. When you choose a post for a question, it reads that post’s author display name, handle, text, and URL to show the target card.</li>
+<li><strong>Authentication information:</strong> When you request a translation, it temporarily reads X’s existing ct0 anti-CSRF cookie and uses it, together with the browser’s existing X session, to authenticate a request to X. It does not ask for your password or API key and does not save authentication cookies in extension storage or send them to the developer. An in-memory SHA-256 digest of the anti-CSRF value separates translation caches between sessions/accounts.</li>
+<li><strong>Questions and chat content:</strong> When you submit your own question, the extension reads the current Grok input and adds the selected post’s URL to the first message. The question is then submitted through X’s native Grok interface. It does not read X direct messages or independently upload attachments.</li>
+<li><strong>Preferences:</strong> The extension stores its enabled state, language order, control size, and translation display preference in your browser.</li>
+</ul>
+<h2>Where information goes</h2>
+<ul>
+<li>A translation request sends the selected post ID, destination language, interface language, and necessary authentication headers/cookies over HTTPS to <code>https://api.x.com/2/grok/translation.json</code>. X returns the translated text.</li>
+<li>Questions and the selected post URL go to X through its native Grok panel only when you submit them. Opening the panel does not submit a question or start an automatic summary.</li>
+<li>The extension has no developer-operated backend, analytics, advertising, telemetry, or tracking scripts. It sends no post content, questions, account identifiers, or authentication information to the developer.</li>
+<li>Data is not sold, used for advertising, or transferred for purposes unrelated to the extension’s core functionality. Its use of information complies with the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data">Chrome Web Store User Data Policy</a>, including the Limited Use requirements.</li>
+</ul>
+<h2>Storage and retention</h2>
+<ul>
+<li>Preferences and a cache-clear notification value are kept in <code>chrome.storage.local</code> until you change them or uninstall the extension. A rate-limit deadline is kept in <code>chrome.storage.session</code> for the browser session.</li>
+<li>Up to 200 translations, keyed by session digest, post ID, and target language, are cached only in service-worker memory. Cached translations are eligible for reuse for 30 minutes; entries can remain in memory until eviction, cache clearing, or worker termination. Translations and session digests are not written to persistent extension storage.</li>
+<li>The selected post and unfinished question are used in the current page/panel. The extension does not independently save chat history. X’s own chat history, retention, and privacy settings apply to information you submit to X.</li>
+</ul>
+<h2>Your control</h2>
+<ul>
+<li>Translations are requested only after you choose a translation language. “Original” restores the original post view; it does not undo information already sent to X.</li>
+<li>Use “Clear cached translations” to clear the extension’s in-memory translations and cancel pending translation work. Turning the extension off also clears its translation cache. Neither action erases X’s own records or chat history.</li>
+<li>Uninstalling removes the extension’s local preferences and session storage. Manage submitted questions and any retained X data through X/Grok settings.</li>
+</ul>
+<h2>External links</h2>
+<p>The optional “Buy me a coffee” link opens <a href="https://buymeacoffee.com/aocrafted" rel="noreferrer">Buy Me a Coffee</a> in a new tab without passing post text, questions, or authentication information. Payments are handled by that service; the extension does not receive payment details. This policy page is hosted on GitHub Pages. GitHub, X, and Buy Me a Coffee process visits and other information under their own privacy policies.</p>
+<h2>Contact and changes</h2>
+<p>For questions, open an issue in <a href="https://github.com/aocrafted/grok-custom-prompts-translation-privacy/issues">the privacy policy repository</a>. Do not include credentials or private post/question content in a public issue. Material changes will be reflected here with an updated date.</p>
+</section>
+<hr>
+<section id="ja" lang="ja">
+<h1>Grok Custom Prompts &amp; Translation Switcher プライバシーポリシー</h1>
+<p class="muted">最終更新日：2026年11月2日 · 開発者：aocrafted</p>
+<p>このブラウザ拡張機能は、Xの投稿を読み、投稿について質問するためのツールです。言語切替を追加し、X標準のGrokパネルで自分の質問を入力できます。XまたはxAIの公式製品ではなく、承認や後援も受けていません。</p>
+<h2>扱う情報</h2>
+<ul>
+<li><strong>ウェブサイトの内容と投稿の識別情報：</strong>x.comとtwitter.com上の投稿本文や必要な画面構造を読み、操作ボタンを配置します。質問対象を選ぶと、その投稿の表示名、ハンドル、本文、URLを読み、対象カードに表示します。</li>
+<li><strong>認証情報：</strong>翻訳を要求したとき、Xの既存のct0（CSRF対策）Cookieを一時的に読み、ブラウザのXログイン状態とともにXへの認証に利用します。パスワードやAPIキーの入力は求めません。認証Cookieを拡張のストレージに保存したり、開発者に送信したりしません。セッション・アカウント別に翻訳キャッシュを分けるため、CSRF値のSHA-256ダイジェストをメモリ内で使用します。</li>
+<li><strong>質問とチャットの内容：</strong>質問を送信するとき、Grokの入力内容を読み、最初のメッセージに対象投稿のURLを添えます。送信はX標準のGrok画面を通じて行います。Xのダイレクトメッセージは読まず、添付を拡張独自にアップロードすることもありません。</li>
+<li><strong>設定：</strong>ON/OFF、言語の順序、ボタンの大きさ、翻訳結果の表示位置をブラウザ内に保存します。</li>
+</ul>
+<h2>情報の送信先と利用目的</h2>
+<ul>
+<li>翻訳要求では、選んだ投稿のID、翻訳先言語、画面言語、認証に必要なヘッダー・Cookieを、HTTPSで<code>https://api.x.com/2/grok/translation.json</code>に送ります。Xから訳文を受け取ります。</li>
+<li>質問文と対象投稿URLは、利用者が送信したときにX標準のGrokパネルを通じてXへ渡します。パネルを開いただけでは質問を送信せず、自動要約も始めません。</li>
+<li>開発者独自のサーバー、アクセス解析、広告、テレメトリー、追跡スクリプトはありません。投稿内容、質問、アカウントの識別情報、認証情報を開発者へ送信しません。</li>
+<li>データの販売、広告への利用、拡張の主な機能と関係のない目的での転送は行いません。情報の利用は、Limited Use要件を含む<a href="https://developer.chrome.com/docs/webstore/program-policies/user-data">Chromeウェブストアのユーザーデータポリシー</a>に従います。</li>
+</ul>
+<h2>保存場所と保存期間</h2>
+<ul>
+<li>設定とキャッシュ削除の通知値は、変更またはアンインストールまで<code>chrome.storage.local</code>に保存します。レート制限の終了時刻は、ブラウザのセッション中、<code>chrome.storage.session</code>に保存します。</li>
+<li>訳文は最大200件まで、セッションのダイジェスト・投稿ID・翻訳先言語をキーとして、サービスワーカーのメモリ内だけに保持します。再利用できるのは30分間です。項目自体は、件数上限による削除、キャッシュ削除、ワーカー終了までメモリに残る場合があります。訳文とセッションのダイジェストは、拡張の永続ストレージには書き込みません。</li>
+<li>対象投稿と未送信の質問は、現在のページ・パネルで使用します。拡張独自のチャット履歴は保存しません。Xへ送った内容には、X側の履歴、保存期間、プライバシー設定が適用されます。</li>
+</ul>
+<h2>利用者による管理</h2>
+<ul>
+<li>翻訳は翻訳先の言語を選んだときだけ要求します。「原文」で投稿の表示を戻せますが、すでにXへ送った情報は取り消せません。</li>
+<li>「翻訳キャッシュを削除」で、拡張のメモリ内の訳文を削除し、処理中の翻訳を中止できます。拡張をOFFにしたときも翻訳キャッシュを削除します。これらの操作はX側の記録やチャット履歴を削除しません。</li>
+<li>アンインストールすると拡張の設定とセッションストレージは削除されます。送信済みの質問やX側で保存されるデータは、X/Grok側の設定で管理してください。</li>
+</ul>
+<h2>外部リンク</h2>
+<p>任意の「Buy me a coffee」リンクは、投稿本文、質問、認証情報を渡さずに、<a href="https://buymeacoffee.com/aocrafted" rel="noreferrer">Buy Me a Coffee</a>を新しいタブで開きます。支払いは同サービスが処理し、拡張は決済情報を受け取りません。このポリシーページはGitHub Pagesで公開しています。GitHub、X、Buy Me a Coffeeでのアクセスなどには、各サービスのプライバシーポリシーが適用されます。</p>
+<h2>お問い合わせと変更</h2>
+<p><a href="https://github.com/aocrafted/grok-custom-prompts-translation-privacy/issues">プライバシーポリシー用リポジトリのIssues</a>からご連絡ください。公開Issueには認証情報や非公開の投稿・質問内容を書かないでください。内容を変更した場合は、このページと最終更新日を更新します。</p>
+</section>
+</body>
+</html>
